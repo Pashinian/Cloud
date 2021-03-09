@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="curandero" class="com.videojuego.cloud.Curandero">
+	<property name="vida" value="90"></property>
+	<property name="nombre" value="Curandero"></property>
+	<property name="arma">
+		<bean class="Rezo">
+			<property name="daño" value="65"></property>
+			<property name="tipo" value="Rezo"></property>
+		</bean>
+	</property>
+</bean>
+
+<bean id="guerrero" class="com.videojuego.cloud.Guerrero">
+	<property name="vida" value="100"></property>
+	<property name="nombre" value="Guerrero"></property>
+	<property name="arma">
+		<bean class="com.videojuego.cloud.Espada">
+			<property name="daño" value="60"></property>
+			<property name="tipo" value="Espada lamida"></property>
+		</bean>
+	</property>
+</bean>
+
+<bean id="mago" class="com.videojuego.cloud.Mago">
+	<property name="vida" value="60"></property>
+	<property name="nombre" value="Mago"></property>
+	<property name="arma">
+		<bean class="com.videojuego.cloud.Hechizo">
+			<property name="daño" value="70"></property>
+			<property name="tipo" value="Hechizos"></property>
+		</bean>
+	</property>
+</bean>
+</beans>

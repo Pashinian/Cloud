@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="arquero" class="entidad.Arquero">
+	<property name="vida" value="1500"></property>
+	<property name="nombre" value="Katniss"></property>
+	<property name="arma">
+		<bean class="entidad.Arco">
+			<property name="daño" value="50"></property>
+			<property name="tipo" value="Arco sinMarco"></property>
+		</bean>
+	</property>
+</bean>
+
+<bean id="curandero" class="entidad.Curandero">
+	<property name="vida" value="900"></property>
+	<property name="nombre" value="Claire"></property>
+	<property name="arma">
+		<bean class="entidad.Baston">
+			<property name="daño" value="65"></property>
+			<property name="tipo" value="Bastón bastardo"></property>
+		</bean>
+	</property>
+</bean>
+
+<bean id="guerrero" class="entidad.Guerrero">
+	<property name="vida" value="1600"></property>
+	<property name="nombre" value="Rufus"></property>
+	<property name="arma">
+		<bean class="entidad.Espada">
+			<property name="daño" value="60"></property>
+			<property name="tipo" value="Espada lamida"></property>
+		</bean>
+	</property>
+</bean>
+
+<bean id="mago" class="entidad.Mago">
+	<property name="vida" value="1000"></property>
+	<property name="nombre" value="Gandalf"></property>
+	<property name="arma">
+		<bean class="entidad.Varita">
+			<property name="daño" value="70"></property>
+			<property name="tipo" value="Varita maldita"></property>
+		</bean>
+	</property>
+</bean>
+</beans>

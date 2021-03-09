@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Debemos de importar este namespace para poder
+trabajar con el motor de plantillas thymeleaf -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>PAGINA DE INICIO</h1>
+	<!-- Tenemos que poner en th:value="" el mismo nombre del
+	atributo que le dimos al objeto Model en el Controlador -->
+	<h3>
+		La fecha es: <span th:text="${fecha}"></span>
+	</h3>	
+	<!-- 
+	Para una lista de objetos.
+	lista -> nombre del atributo del objeto Model que hemos puesto en el controlador
+	valor -> cada uno de los valores que tiene la lista,equivalete a un for each de java
+	Ej:
+	for(String valor : lista){
+		System.out.println(valor);
+	}
+	-->
+	<h3 style="color:red" th:each="valor : ${lista}">
+    	<span th:text="${valor}"></span>
+    	<!-- si valor fuera un objeto podemos acceder a sus
+    	atributos de la forma "valor.nombreAtributo"
+    	ojo! sin get!
+    	 -->
+	</h3>
+</body>
+</html>

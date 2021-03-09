@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div style="text-align: center">
+		<h1>Bienvenidos a nuestro WEB SITE</h1>
+		<!-- 
+		En action tenemos que poner la URL que vamos a 
+		mapear en el controlador
+		En method teneos que poner el metodo HTTP al que
+		hemos mapeado en el controlador
+		 -->
+		<form action="doLogin" method="post">
+			<!-- Como el formulario tiene que mandar
+			parametros tenemos que crear unos input
+			type y el nombre de los parametros ira
+			en el atributo "name" y el valor de los
+			atributos ira en "value" -->
+			Usuario: <input type="text" name="nombre" placeholder="Username">
+			<br/>
+			Password: <input type="password" name="pass" placeholder="Password"/>
+			<br/>
+			<input type="submit" value="Enviar"/>
+		</form>
+	</div>
+</body>
+</html>
